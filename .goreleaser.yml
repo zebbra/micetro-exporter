@@ -1,0 +1,20 @@
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - env:
+      - CGO_ENABLED=0
+    binary: micetro-exporter
+    ldflags:
+      - -s -w -X github.com/maetthu/micetro-exporter/internal/lib/version.Version={{.Version}} -X github.com/maetthu/micetro-exporter/internal/lib/version.Commit={{.Commit}} -X github.com/maetthu/micetro-exporter/internal/lib/version.Date={{.Date}}
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+archives:
+  - files:
+      - LICENSE
+      - README.md
