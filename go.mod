@@ -1,4 +1,4 @@
-module github.com/maetthu/micetro-exporter
+module github.com/zebbra/micetro-exporter
 
 go 1.17
 

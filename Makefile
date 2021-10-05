@@ -1,6 +1,6 @@
 .PHONY: build install snapshot dist test vet lint fmt run clean
 OUT := micetro-exporter
-PKG := github.com/maetthu/micetro-exporter
+PKG := github.com/zebbra/micetro-exporter
 PKG_LIST := $(shell go list ${PKG}/...)
 GO_FILES := $(shell find . -name '*.go')
 

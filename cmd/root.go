@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/maetthu/micetro-exporter/internal/lib/micetro"
-	"github.com/maetthu/micetro-exporter/internal/lib/version"
+	"github.com/zebbra/micetro-exporter/internal/lib/micetro"
+	"github.com/zebbra/micetro-exporter/internal/lib/version"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/cobra"
