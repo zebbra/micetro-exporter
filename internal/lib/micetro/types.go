@@ -43,21 +43,22 @@ type DHCPServerList struct {
 }
 
 type Range struct {
-	Ref               string                 `json:"ref"`
-	Name              string                 `json:"name"`
-	From              string                 `json:"from"`
-	To                string                 `json:"to"`
-	ChildRanges       []interface{}          `json:"childRanges"`
-	DhcpScopes        []interface{}          `json:"dhcpScopes"`
-	Subnet            bool                   `json:"subnet"`
-	Locked            bool                   `json:"locked"`
-	AutoAssign        bool                   `json:"autoAssign"`
-	HasSchedule       bool                   `json:"hasSchedule"`
-	HasMonitor        bool                   `json:"hasMonitor"`
-	CustomProperties  map[string]interface{} `json:"customProperties"`
-	InheritAccess     bool                   `json:"inheritAccess"`
-	IsContainer       bool                   `json:"isContainer"`
-	HasRogueAddresses bool                   `json:"hasRogueAddresses"`
+	Ref                   string                 `json:"ref"`
+	Name                  string                 `json:"name"`
+	From                  string                 `json:"from"`
+	To                    string                 `json:"to"`
+	ChildRanges           []interface{}          `json:"childRanges"`
+	DhcpScopes            []interface{}          `json:"dhcpScopes"`
+	Subnet                bool                   `json:"subnet"`
+	Locked                bool                   `json:"locked"`
+	AutoAssign            bool                   `json:"autoAssign"`
+	HasSchedule           bool                   `json:"hasSchedule"`
+	HasMonitor            bool                   `json:"hasMonitor"`
+	CustomProperties      map[string]interface{} `json:"customProperties"`
+	InheritAccess         bool                   `json:"inheritAccess"`
+	IsContainer           bool                   `json:"isContainer"`
+	UtilizationPercentage int                    `json:"utilizationPercentage"`
+	HasRogueAddresses     bool                   `json:"hasRogueAddresses"`
 }
 
 type RangeList struct {

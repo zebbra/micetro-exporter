@@ -77,5 +77,21 @@ func (mc MicetroCollector) Collect(ch chan<- prometheus.Metric) {
 			scope.Name,
 			rangeMap[scope.RangeRef].Name,
 		)
+
+		ch <- prometheus.MustNewConstMetric(
+			prometheus.NewDesc(
+				"dhcp_scope_utilization",
+				"Utilization percentage in scope",
+				[]string{"ref", "host", "name", "range"},
+				nil,
+			),
+			prometheus.GaugeValue,
+			float64(rangeMap[scope.RangeRef].UtilizationPercentage),
+			scope.Ref,
+			serverMap[scope.DhcpServerRef].Name,
+			scope.Name,
+			rangeMap[scope.RangeRef].Name,
+		)
+
 	}
 }
